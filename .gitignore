@@ -1,0 +1,33 @@
+issues/
+analyze/
+da-analizzare/
+.gradle*/
+CLAUDE.md
+.claude/
+_analysis/
+
+# Android/Gradle build outputs and machine-local configuration
+**/build/
+**/.cxx/
+**/local.properties
+*.apk
+*.aab
+*.apks
+mapping.txt
+
+# Signing material and credentials
+**/.signing/
+*.jks
+*.keystore
+signing.properties
+
+# Local caches, logs, temporary data, and IDE metadata
+**/tmp/
+**/logs/
+*.log
+.idea/
+*.iml
+
+# User-provided proprietary/local inputs
+Lossless.dll
+*.driver.zip

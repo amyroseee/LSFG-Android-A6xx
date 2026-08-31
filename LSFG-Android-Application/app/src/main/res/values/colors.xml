@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lsfg_background">#FF0B0F12</color>
+    <color name="lsfg_primary">#FF7FE3FF</color>
+    <color name="lsfg_surface_container_high">#FF1C252B</color>
+</resources>

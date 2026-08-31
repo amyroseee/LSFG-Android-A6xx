@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LSFG Android</string>
+    <string name="accessibility_service_label">LSFG Touch Passthrough</string>
+    <string name="accessibility_service_description">Forwards touch events from the LSFG overlay to the underlying app so you can interact with games while the frame-generation overlay is visible.</string>
+
+    <string name="notif_channel_session">LSFG Session</string>
+    <string name="notif_session_title">LSFG session active</string>
+    <string name="notif_session_text">Frame generation overlay is running. Tap to stop.</string>
+
+    <string name="legal_title">Legal notice</string>
+    <string name="legal_warning_body"><![CDATA[
+        <b>WARNING — You must own Lossless Scaling on Steam.</b><br/><br/>
+        This application requires the <b>Lossless.dll</b> file from <b>Lossless Scaling</b> by THS.
+        You must select this file from <b>your own legally purchased copy</b> of Lossless Scaling on Steam.<br/><br/>
+        <b>Do NOT download Lossless.dll from third-party sources.</b> Doing so is copyright infringement.<br/><br/>
+        The developers of this application:<br/>
+        • do <b>not</b> distribute Lossless.dll<br/>
+        • are <b>not affiliated</b> with THS or Lossless Scaling<br/>
+        • take <b>no responsibility</b> for any misuse of this app<br/><br/>
+        By continuing, you confirm you own a valid Lossless Scaling Steam license.
+    ]]></string>
+    <string name="legal_accept">I own a Lossless Scaling license — continue</string>
+    <string name="legal_decline">Cancel</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_dll">Select DLL</string>
+    <string name="nav_params">Parameters</string>
+    <string name="nav_frame_gen">Frame generation</string>
+    <string name="nav_framegen_pacing">Frame generation &amp; pacing</string>
+    <string name="nav_gpu">GPU upscaler / enhancer</string>
+    <string name="nav_npu">NPU post-process</string>
+    <string name="nav_cpu">CPU post-process</string>
+    <string name="nav_image_quality">Image quality</string>
+    <string name="nav_overlay_display">Overlay &amp; display</string>
+    <string name="nav_app">Target app</string>
+    <string name="nav_start">Start session</string>
+    <string name="nav_tutorial">Tutorial</string>
+    <string name="tutorial_subtitle">How to use LSFG-Android</string>
+    <string name="tutorial_intro">Follow these steps to get the most out of frame generation. Tap any screenshot to view it full size.</string>
+    <string name="tutorial_empty">Tutorial content will be added soon. Drop your screenshots in res/drawable-nodpi and reference them in TutorialScreen.kt.</string>
+    <string name="tutorial_prompt_title">View the tutorial?</string>
+    <string name="tutorial_prompt_body">Welcome to LSFG-Android! It is strongly recommended to read the tutorial before using the app — it walks you through accessibility permissions, loading Lossless.dll, picking a target app and the overlay menu.\n\nYou can always reopen the tutorial later from the Tutorial entry on the home screen.</string>
+    <string name="tutorial_prompt_view">View tutorial</string>
+    <string name="tutorial_prompt_skip">Skip for now</string>
+
+    <!-- Section eyebrows -->
+    <string name="section_frame_generation">Frame generation</string>
+    <string name="section_pacing">Pacing</string>
+    <string name="section_quality">Quality</string>
+    <string name="section_advanced">Advanced</string>
+    <string name="section_gpu_scaling">GPU — Scaling</string>
+    <string name="section_gpu_enhancement">GPU — Enhancement</string>
+    <string name="section_gpu_sharpen_color">GPU — Sharpen &amp; color</string>
+    <string name="section_gpu">GPU</string>
+    <string name="section_npu">NPU</string>
+    <string name="section_cpu">CPU</string>
+    <string name="section_overlay_mode">Overlay entry</string>
+    <string name="section_overlay_handle">Overlay handle</string>
+    <string name="param_overlay_mode">Overlay style</string>
+    <string name="param_overlay_mode_desc">Choose how to open the in-game settings panel: a draggable floating icon, or a swipe-from-edge drawer.</string>
+    <string name="overlay_mode_icon_button">Icon button</string>
+    <string name="overlay_mode_drawer">Drawer</string>
+    <string name="overlay_mode_drawer_warning_title">Use the swipe drawer?</string>
+    <string name="overlay_mode_drawer_warning_body">On some devices the edge-swipe drawer may not respond, leaving you stuck on the overlay with no way to close it from inside the game. The floating icon is the recommended option. Continue with the drawer?</string>
+    <string name="overlay_mode_drawer_warning_confirm">Use drawer</string>
+    <string name="overlay_mode_drawer_warning_cancel">Cancel</string>
+    <string name="section_hud">HUD</string>
+    <string name="section_trusted_overlay">Touch pass-through</string>
+    <string name="param_trusted_overlay">Trusted overlay (Accessibility)</string>
+    <string name="param_trusted_overlay_desc">Hosts the overlay as a trusted accessibility surface so taps reach the app underneath on strict devices (e.g. Orange Pi 5 Ultra) where they would otherwise be blocked. Trade-off: while a session is running the overlay covers the status bar and navigation bar — you cannot pull down notifications or tap home/back. Leave OFF if your device passes taps already; turn ON only when you cannot tap through. Requires the LSFG accessibility service to be enabled.</string>
+    <string name="section_capture_mode">Capture mode</string>
+    <string name="capture_mode_mediaprojection">MediaProjection</string>
+    <string name="capture_mode_shizuku">Shizuku capture</string>
+    <string name="capture_mode_root">Root capture</string>
+    <string name="capture_mode_desc">MediaProjection captures through Android screen sharing. Shizuku and Root capture use a privileged UID-filtered target capture path, useful on devices whose MediaProjection includes overlays.</string>
+    <string name="param_frame_graph">Frame pacing graph</string>
+    <string name="param_frame_graph_desc">Show a live plot of generated frame intervals in the overlay. Useful for diagnosing stutter.</string>
+
+    <string name="dll_status_none">No Lossless.dll selected yet.</string>
+    <string name="dll_status_ready">Lossless.dll ready (%1$s).</string>
+    <string name="dll_pick_button">Select Lossless.dll</string>
+    <string name="dll_reextract_button">Re-extract shaders</string>
+
+    <string name="param_multiplier">Frame multiplier</string>
+    <string name="param_multiplier_desc">Number of frames produced per real frame. 2 = one interpolated frame between each pair. 3–4 recommended on mobile.</string>
+    <string name="param_flow_scale">Flow scale</string>
+    <string name="param_flow_scale_desc">Internal motion estimation resolution. Lower = faster but less accurate.</string>
+    <string name="param_performance_mode">Performance mode (LSFG 3.1P)</string>
+    <string name="param_performance_mode_desc">Use the faster, lower-quality shader variant. Recommended on mid-range GPUs.</string>
+    <string name="param_hdr">HDR mode</string>
+    <string name="param_hdr_desc">Enable only if your device and game output HDR.</string>
+    <string name="param_anti_artifacts">Anti-artifacts Mode</string>
+    <string name="param_anti_artifacts_desc">Suppress generated frames during very fast camera movement to reduce missing character parts and warping. Off by default.</string>
+    <string name="param_framegen_fp16">FP16 frame-gen shaders</string>
+    <string name="param_framegen_fp16_desc">Use the half-precision shader variants pre-compiled inside Lossless.dll instead of the full-precision DXBC set. Reduces GPU load and memory bandwidth. Quality is virtually identical; falls back to FP32 automatically if anything goes wrong.</string>
+    <string name="param_npu_post">NPU image enhancement</string>
+    <string name="param_npu_post_desc_available">Runs a handcrafted NNAPI graph (unsharp-mask, detail boost, chroma clean, game crisp) entirely on the dedicated accelerator. Device: %1$s</string>
+    <string name="param_npu_post_desc_unavailable">Disabled because Android does not report a dedicated NNAPI accelerator. Device: %1$s</string>
+    <string name="param_npu_preset">NPU preset</string>
+    <string name="npu_preset_off">Off</string>
+    <string name="npu_preset_sharpen">Sharpen</string>
+    <string name="npu_preset_detail_boost">Detail</string>
+    <string name="npu_preset_chroma_clean">Clean</string>
+    <string name="npu_preset_game_crisp">Game</string>
+    <string name="param_npu_amount">NPU amount</string>
+    <string name="param_npu_amount_desc">Strength of the enhance kernel. Higher values give a crisper image but can exaggerate compression artifacts.</string>
+    <string name="param_npu_radius">NPU radius</string>
+    <string name="param_npu_radius_desc">Blur radius used by the unsharp-mask paths. Larger radius brings out broader edges; smaller radius targets fine detail.</string>
+    <string name="param_npu_upscale">NPU upscale factor</string>
+    <string name="param_npu_upscale_desc">1x keeps output size; 2x requests NPU bilinear upscale before the enhance pass.</string>
+
+    <string name="param_cpu_post">CPU post-process</string>
+    <string name="param_cpu_post_desc">Pure CPU pixel pass applied after the NPU stage. Cheap, always available, and tunable with saturation, vibrance and vignette on top of the preset.</string>
+    <string name="param_cpu_preset">CPU preset</string>
+    <string name="cpu_preset_off">Off</string>
+    <string name="cpu_preset_enhance_lut">Enhance</string>
+    <string name="cpu_preset_warm">Warm</string>
+    <string name="cpu_preset_cool">Cool</string>
+    <string name="cpu_preset_vignette">Vignette</string>
+    <string name="cpu_preset_gamer_sharp">Sharp</string>
+    <string name="cpu_preset_cinematic">Cinematic</string>
+    <string name="param_cpu_strength">CPU strength</string>
+    <string name="param_cpu_strength_desc">Primary amount controlling the current CPU preset (contrast boost, sharpen amount, cinematic mix, …).</string>
+    <string name="param_cpu_saturation">Saturation</string>
+    <string name="param_cpu_saturation_desc">Zero desaturates the frame; 50 percent is neutral; full pushes colors toward vivid.</string>
+    <string name="param_cpu_vibrance">Vibrance</string>
+    <string name="param_cpu_vibrance_desc">Lifts low-saturation pixels without over-boosting already vivid ones. Useful for grayed-out HUDs and skin tones.</string>
+    <string name="param_cpu_vignette">Vignette</string>
+    <string name="param_cpu_vignette_desc">Darkens the corners on a cosine falloff starting at 60% of the radius.</string>
+    <string name="param_gpu_post">GPU upscalers / enhancers</string>
+    <string name="param_gpu_post_desc">Use Vulkan GPU post-processing methods for image upscaling and enhancement.</string>
+    <string name="param_gpu_stage">GPU processing order</string>
+    <string name="gpu_stage_before_lsfg">Real frames first</string>
+    <string name="gpu_stage_after_lsfg">Final overlay frames</string>
+    <string name="param_gpu_method">GPU method</string>
+    <string name="gpu_method_fsr1">FSR 1 EASU + RCAS</string>
+    <string name="gpu_method_cas">AMD CAS</string>
+    <string name="gpu_method_nis">NVIDIA NIS</string>
+    <string name="gpu_method_lanczos">Lanczos</string>
+    <string name="gpu_method_bicubic">Bicubic</string>
+    <string name="gpu_method_bilinear">Bilinear</string>
+    <string name="gpu_method_catmull">Catmull-Rom</string>
+    <string name="gpu_method_mitchell">Mitchell-Netravali</string>
+    <string name="gpu_method_anime4k_fast">Anime4K Fast</string>
+    <string name="gpu_method_anime4k_restore">Anime4K Restore</string>
+    <string name="gpu_method_xbrz">xBRZ</string>
+    <string name="gpu_method_edge_directed">Edge-directed</string>
+    <string name="gpu_method_unsharp">Unsharp mask</string>
+    <string name="gpu_method_luma">Luma sharpen</string>
+    <string name="gpu_method_contrast">Contrast adaptive</string>
+    <string name="gpu_method_deband">Deband</string>
+    <string name="param_gpu_upscale">GPU upscale factor</string>
+    <string name="param_gpu_upscale_desc">Controls the requested output scale for methods that upscale.</string>
+    <string name="param_gpu_sharpness">GPU sharpness</string>
+    <string name="param_gpu_sharpness_desc">Controls RCAS/NIS/CAS-style sharpening strength.</string>
+    <string name="param_gpu_strength">GPU enhancement strength</string>
+    <string name="param_gpu_strength_desc">Controls the intensity of non-scale enhancement passes.</string>
+    <string name="param_fps_counter">FPS counter on overlay</string>
+    <string name="param_fps_counter_desc">Show a small FPS readout in the top-left of the overlay. MediaProjection counts visible capture frames; Shizuku capture counts privileged UID-filtered target frames.</string>
+    <string name="param_drawer_edge">Drawer handle position</string>
+    <string name="param_drawer_edge_desc">Choose where the in-game drawer handle appears on the overlay.</string>
+    <string name="drawer_edge_left">Left</string>
+    <string name="drawer_edge_right">Right</string>
+    <string name="drawer_edge_top">Top</string>
+    <string name="drawer_edge_bottom">Bottom</string>
+
+    <string name="app_picker_title">Select the target app</string>
+    <string name="app_picker_hint">Pick the game or app you want to apply frame generation to. It will be launched when you start the session.</string>
+
+    <string name="nav_automatic_overlay">Automatic Overlay</string>
+    <string name="automatic_overlay_title">Automatic Overlay</string>
+    <string name="automatic_overlay_hint">Pick the apps that should automatically show the LSFG launcher when opened from the home screen. A small floating icon appears on top of the game; tap it to start the frame-generation overlay.</string>
+    <string name="automatic_overlay_a11y_required">Enable the LSFG accessibility service so the app can detect when one of the selected games is opened.</string>
+    <string name="automatic_overlay_a11y_action">Open accessibility settings</string>
+    <string name="automatic_overlay_count_zero">None — tap to add</string>
+    <string name="automatic_overlay_count_n">%1$d apps configured</string>
+    <string name="auto_overlay_sheet_target">Active app</string>
+    <string name="auto_overlay_sheet_activate">Activate frame-generation overlay</string>
+    <string name="auto_overlay_sheet_disable">Disable Automatic Overlay for this app</string>
+    <string name="auto_overlay_sheet_close">Close</string>
+    <string name="auto_overlay_sheet_intro">Tap to start the LSFG capture session for this app. Android will ask you to confirm screen recording.</string>
+
+    <string name="start_button">Start LSFG session</string>
+    <string name="stop_button">Stop session</string>
+
+    <string name="perm_overlay_missing">The overlay permission is required. Please grant "Display over other apps".</string>
+    <string name="perm_accessibility_missing">The LSFG accessibility service must be enabled so touches pass through the overlay.</string>
+    <string name="perm_capture_denied">Screen capture was denied. LSFG cannot run without it.</string>
+
+    <string name="limitation_title">About this preview</string>
+    <string name="limitation_body">On non-rooted Android, LSFG cannot be injected into another app\'s Vulkan context like on Linux. MediaProjection provides the standard capture path; Shizuku capture can use a privileged UID-filtered target path on supported builds and requires Shizuku with ADB or wireless debugging active. See the README for details.</string>
+
+    <string name="a11y_info">Optional. LSFG renders at full opacity and forwards touches to the game without this service. Enable it only if you notice rendering issues on a specific device.</string>
+
+    <string name="crash_dialog_title">LSFG crashed on last run</string>
+    <string name="crash_dialog_body">A report was saved. You can share it with the developer to help debug the issue. Device and extension info is already included — no personal data is attached.</string>
+    <string name="crash_dialog_share">Share report</string>
+    <string name="crash_dialog_dismiss">Dismiss</string>
+    <string name="crash_dialog_view">View</string>
+    <string name="crash_export_log">Export diagnostic log</string>
+    <string name="crash_export_none">No diagnostic log available yet — run a session first.</string>
+
+    <!-- Benchmark mode -->
+    <string name="benchmark_title">Benchmark Mode</string>
+    <string name="benchmark_home_button">Run benchmark</string>
+    <string name="benchmark_intro">Runs three back-to-back passes (multiplier ×2, ×3, ×4) with a fixed preset and produces a shareable report. Use this baseline before/after performance changes to measure deltas.</string>
+    <string name="benchmark_preset_summary">Flow scale 0.70 · Performance mode ON · Anti-artifacts OFF · Post-processing OFF · Vsync AUTO</string>
+    <string name="benchmark_duration_summary">Each run: 60 seconds sampling + 2 seconds warmup. Total ~3 minutes plus target-app launch.</string>
+    <string name="benchmark_dual_precision_summary">FP16 supported on this GPU — the benchmark will run twice (FP32 then FP16) for direct side-by-side numbers in the same report.</string>
+    <string name="benchmark_requires_target">Pick a target app first (in the Automatic Overlay screen).</string>
+    <string name="benchmark_start">Start benchmark</string>
+    <string name="benchmark_cancel">Cancel</string>
+    <string name="benchmark_share_report">Share last report</string>
+    <string name="benchmark_running_warmup">Warmup ×%1$d — %2$d s remaining</string>
+    <string name="benchmark_running_sampling">Run %1$d/%2$d — multiplier ×%3$d — %4$d s remaining</string>
+    <string name="benchmark_completed">Benchmark complete</string>
+    <string name="benchmark_completed_body">Report saved to %1$s. Use the share sheet to send it.</string>
+    <string name="benchmark_failed">Benchmark failed: %1$s</string>
+    <string name="benchmark_no_report">No report available yet — run a benchmark first.</string>
+</resources>

@@ -1,0 +1,16 @@
+# Copy the lines below into your user-level Gradle properties file:
+#   Windows: %USERPROFILE%\.gradle\gradle.properties
+#   Linux/macOS: ~/.gradle/gradle.properties
+#
+# Then fill in the values for your own keystore. Do NOT commit real values to
+# the repo. If these properties are missing, release builds will silently fall
+# back to the debug signing config (see app/build.gradle.kts).
+#
+# Generate a keystore with:
+#   keytool -genkey -v -keystore my-release.jks -keyalg RSA -keysize 2048 \
+#           -validity 10000 -alias my-key-alias
+
+LSFGAndroid_STORE_FILE=/absolute/path/to/your-release.jks
+LSFGAndroid_STORE_PASSWORD=your-store-password
+LSFGAndroid_KEY_ALIAS=your-key-alias
+LSFGAndroid_KEY_PASSWORD=your-key-password

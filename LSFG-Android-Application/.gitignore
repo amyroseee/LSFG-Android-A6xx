@@ -1,0 +1,33 @@
+# Gradle and build outputs
+.gradle/
+build/
+*/build/
+build_*/
+.gradle-user-home/
+
+# Local SDK and machine-specific config
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.kotlin/
+
+# Native and external build artifacts
+.cxx/
+externalNativeBuild/
+
+# Generated APK/AAB outputs
+*.apk
+*.aab
+*.ap_
+
+# Logs and profiling
+*.log
+captures/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+lsfg-release.jks
