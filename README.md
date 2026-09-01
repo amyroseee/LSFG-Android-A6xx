@@ -40,7 +40,7 @@ generated frames are displayed through a system overlay.
 
 ### Current status
 
-✅ Frame generation working on **Adreno 619**
+✅ Frame generation working on **Adreno 619**.
 
 ✅ A6xx compatibility improvements
 
