@@ -150,6 +150,7 @@ Adreno 620
 Adreno 630
 Adreno 640
 Adreno 650
+Adreno 660
 ```
 
 may also work, but compatibility is **not guaranteed yet**.
