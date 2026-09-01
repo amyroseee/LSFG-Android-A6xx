@@ -1,0 +1,126 @@
+name: Bug Report
+description: Report a problem with LSFG Android
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+        Please provide as much information as possible.
+
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      placeholder: "Example: Moto G34"
+    validations:
+      required: true
+
+  - type: input
+    id: soc
+    attributes:
+      label: SoC
+      placeholder: "Example: Snapdragon 695"
+    validations:
+      required: true
+
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU
+      placeholder: "Example: Adreno 619"
+    validations:
+      required: true
+
+  - type: input
+    id: android
+    attributes:
+      label: Android Version
+      placeholder: "Example: Android 15"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rom
+    attributes:
+      label: ROM
+      options:
+        - Stock ROM
+        - Custom ROM
+        - GSI
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: LSFG Android Version
+      placeholder: "Example: v1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: capture
+    attributes:
+      label: Capture Mode
+      options:
+        - MediaProjection
+        - Shizuku
+        - Root
+    validations:
+      required: true
+
+  - type: dropdown
+    id: multiplier
+    attributes:
+      label: Frame Generation Mode
+      options:
+        - 2x
+        - 3x
+        - 4x
+        - Not applicable
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Describe the Bug
+      description: Explain what happened and what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Open LSFG Android
+        2. Select...
+        3. Start...
+        4. The issue occurs...
+    validations:
+      required: true
+
+  - type: textarea
+    id: settings
+    attributes:
+      label: LSFG Settings
+      description: Include Performance Mode, Low Latency, Flow Scale, pacing settings, etc.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: Add logs, screenshots or videos if available.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I am using a legitimate copy of Lossless Scaling.
+          required: true
+        - label: I checked that this issue has not already been reported.
+          required: true
