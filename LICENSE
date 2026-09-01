@@ -15,14 +15,14 @@ is NOT inside one of the directories listed below). The two main
 subdirectories of this repository carry their own licenses, which prevail
 over this file within their respective trees:
 
-  - LSFG-Android/       — Custom License (No Play Store, No Commercial Use).
-                          See LSFG-Android/LICENSE.
-  - lsfg-vk-android/    — MIT License (upstream lsfg-vk).
-                          See lsfg-vk-android/LICENSE.md.
+  - LSFG-Android-Application/ — GNU General Public License v3.0 (GPL-3.0).
+                               See LSFG-Android-Application/LICENSE.
+  - lsfg-vk-android/           — MIT License (inherited from upstream lsfg-vk).
+                               See lsfg-vk-android/LICENSE.md.
 
-If you redistribute the repository as a whole, you must reproduce all three
-license files and respect the most restrictive terms applicable to each
-subtree.
+If you redistribute the repository as a whole, you must reproduce the
+applicable license files and comply with the terms that apply to each
+subdirectory.
 
 `Lossless.dll` is the property of THS / Lossless Scaling and is NOT part of
 this repository or any of its subdirectories. It is not distributed,
