@@ -24,7 +24,7 @@ Android-specific compatibility work built on top of
 ## About
 
 This module is the native frame-generation backend used by
-[`LSFG-Android`](../LSFG-Android/).
+[`LSFG-Android-Application`](../LSFG-Android-Application/)
 
 It is based on [`lsfg-vk`](https://github.com/PancakeTAS/lsfg-vk) and adds
 Android-specific Vulkan integration required for frame generation through
