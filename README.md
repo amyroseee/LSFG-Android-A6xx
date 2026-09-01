@@ -12,8 +12,8 @@
 ![A6xx](https://img.shields.io/badge/Compatibility-A6xx-purple)
 ![Tested](https://img.shields.io/badge/Tested-Adreno%20619-blueviolet)
 
-[![Latest Release](https://img.shields.io/github/v/release/SEU_USUARIO/SEU_REPO?label=Latest%20Release)](../../releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/SEU_USUARIO/SEU_REPO/total?label=Downloads)](../../releases)
+[![Latest Release](https://img.shields.io/github/v/release/amyroseee/LSFG-Android-A6xx?label=Latest%20Release)](../../releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/amyroseee/LSFG-Android-A6xx/total?label=Downloads)](../../releases)
 
 ### Lossless Scaling Frame Generation on Android
 
@@ -239,8 +239,8 @@ Use pre-releases for testing and report any regressions through GitHub Issues.
 Clone the repository:
 
 ```sh
-git clone https://github.com/SEU_USUARIO/SEU_REPO.git
-cd SEU_REPO/LSFG-Android-Application
+git clone https://github.com/amyroseee/LSFG-Android-A6xx.git
+cd LSFG-Android-A6xx/LSFG-Android-Application
 ```
 
 Build a debug APK:
